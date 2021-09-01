@@ -1,19 +1,19 @@
 
 
 async function getTeams(){
-    let req = await fetch('http://testtaskman.herokuapp.com/data/teams');
+    let req = await fetch('https://testtaskman.herokuapp.com/data/teams');
 
     return await req.json();
 }
 
 async function getTeam(id){
-    let req = await fetch(`http://testtaskman.herokuapp.com/data/teams/${id}`);
+    let req = await fetch(`https://testtaskman.herokuapp.com/data/teams/${id}`);
 
     return await req.json();
 }
 
 async function getallMembers(){
-    let req = await fetch('http://testtaskman.herokuapp.com/data/members')
+    let req = await fetch('https://testtaskman.herokuapp.com/data/members')
 
     return await req.json();
 }
@@ -25,7 +25,7 @@ async function getMember(teamId){
 
     let query = queryEncoder(queryObj)
 
-    let req = await fetch(`http://testtaskman.herokuapp.com/data/members?${query}`);
+    let req = await fetch(`https://testtaskman.herokuapp.com/data/members?${query}`);
     return req.json()
 }
 
@@ -36,7 +36,7 @@ async function getMembersForTeam(teamId){
     }
     let query = queryEncoder(queryObj)
 
-    let req = await fetch(`http://testtaskman.herokuapp.com/data/members?${query}`);
+    let req = await fetch(`https://testtaskman.herokuapp.com/data/members?${query}`);
     return req.json()
 
 }
@@ -48,13 +48,13 @@ async function getMembersForTeamWithUser(teamId){
     }
     let query = queryEncoder(queryObj)
 
-    let req = await fetch(`http://testtaskman.herokuapp.com/data/members?${query}`);
+    let req = await fetch(`https://testtaskman.herokuapp.com/data/members?${query}`);
     return req.json()
 
 }
 
 async function createTeam(form) {
-    let req = await fetch('http://testtaskman.herokuapp.com/data/teams', {
+    let req = await fetch('https://testtaskman.herokuapp.com/data/teams', {
         method: 'Post',
         headers: {
             'Content-Type': 'application/json',
