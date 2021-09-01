@@ -1,5 +1,5 @@
 import loginRegister from "../../service/loginRegister.js";
-import { registerTemplate } from "./registerTemaplate.js";
+import { registerTemplate } from "./registerTemplate.js";
 
 let form = undefined;
 
