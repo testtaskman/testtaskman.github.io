@@ -42,7 +42,7 @@ async function getView(context) {
 }
 
 async function adminRequester(teamId){
-    let res = await fetch('http://localhost:3030/data/members', {
+    let res = await fetch('https://testtaskman.herokuapp.com/data/members', {
         method: 'Post',
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ async function approveRequester(memberId){
     let membership = {
         status: 'member'
     }
-    let res = await fetch(`http://localhost:3030/data/members/${memberId}`, {
+    let res = await fetch(`https://testtaskman.herokuapp.com/data/members/${memberId}`, {
         method: 'Put',
         headers: {
             'X-Authorization': localStorage.getItem('authToken')
