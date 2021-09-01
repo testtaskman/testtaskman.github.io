@@ -1,6 +1,6 @@
 
 
-let baseUrl = 'http://testtaskman.herokuapp.com';
+let baseUrl = 'https://testtaskman.herokuapp.com';
 
 async function login(user){
     let req = await fetch(baseUrl + '/login', {

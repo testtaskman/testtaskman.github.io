@@ -2,7 +2,7 @@
 async function login(loginUser){
     
 
-    let req = await fetch('http://testtaskman.herokuapp.com/users/login', {
+    let req = await fetch('https://testtaskman.herokuapp.com/users/login', {
         method: 'Post',
         headers: {
             'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ async function login(loginUser){
 async function register(registerUser){
     
 
-    let req = await fetch('http://testtaskman.herokuapp.com/users/register', {
+    let req = await fetch('https://testtaskman.herokuapp.com/users/register', {
         method: 'Post',
         headers: {
             'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ async function register(registerUser){
 }
 
 async function logout(){
-    let req = await fetch('http://testtaskman.herokuapp.com/users/logout', {
+    let req = await fetch('https://testtaskman.herokuapp.com/users/logout', {
         headers: {
             'X-Authorization': localStorage.getItem('authToken')
         }
